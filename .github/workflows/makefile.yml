@@ -14,10 +14,6 @@ jobs:
          - pine64-pinephone.img.xz
          - pine64-pinetab.img.xz
          - purism-librem5.tar.xz
-         - boot-xiaomi-beryllium-tianma.img
-         - boot-xiaomi-beryllium-ebbg.img
-         - boot-oneplus-enchilada.img
-         - boot-oneplus-fajita.img
          - sourceparts-pocketpc.img.xz
     steps:
     - uses: actions/checkout@v3
