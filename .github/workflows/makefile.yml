@@ -11,13 +11,19 @@ jobs:
     strategy:
       matrix:
         Target:
-          - pine64-pinephone.img.xz
-          - pine64-pinetab.img.xz
+         - pine64-pinephone.img.xz
+         - pine64-pinetab.img.xz
+         - purism-librem5.tar.xz
+         - boot-xiaomi-beryllium-tianma.img
+         - boot-xiaomi-beryllium-ebbg.img
+         - boot-oneplus-enchilada.img
+         - boot-oneplus-fajita.img
+         - sourceparts-pocketpc.img.xz
     steps:
     - uses: actions/checkout@v3
     
     - name: Install dependencies
-      run: sudo apt-get install -y gcc-aarch64-linux-gnu u-boot-tools mtools libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
+      run: sudo apt-get install -y gcc-aarch64-linux-gnu gcc-arm-none-eabi u-boot-tools mtools libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf uuu android-tools-mkbootimg
   
     - name: Build image
       env:
