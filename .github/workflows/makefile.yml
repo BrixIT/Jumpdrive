@@ -15,7 +15,10 @@ jobs:
           - pine64-pinetab.img.xz
     steps:
     - uses: actions/checkout@v3
-          
+    
+    - name: Install dependencies
+      run: sudo apt-get install -y gcc-aarch64-linux-gnu u-boot-tools mtools libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
+  
     - name: Build image
       env:
         TARGET: ${{matrix.Target}}
